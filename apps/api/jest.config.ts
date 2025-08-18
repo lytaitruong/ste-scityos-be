@@ -1,3 +1,3 @@
-import { nestConfig } from '@repo/jest-config';
+import { nestConfig } from '@repo/config-jest/src/nest'
 
-export default nestConfig;
+export default nestConfig
