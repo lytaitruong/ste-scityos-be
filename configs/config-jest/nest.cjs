@@ -1,8 +1,7 @@
-import type { Config } from 'jest'
+const { config: baseConfig } = require('./base.cjs')
 
-import { config as baseConfig } from './base'
-
-export const nestConfig = {
+/** @type {import('jest').Config} */
+const nestConfig = {
   ...baseConfig,
   rootDir: 'src',
   testRegex: '.*\\.spec\\.ts$',
@@ -12,7 +11,7 @@ export const nestConfig = {
       {
         sourceMaps: true,
         jsc: {
-          target: 'es2021',
+          target: 'es2023',
           parser: {
             syntax: 'typescript',
             decorators: true,
@@ -33,4 +32,5 @@ export const nestConfig = {
   collectCoverageFrom: ['**/*.(t|j)s'],
   coverageDirectory: '../coverage',
   testEnvironment: 'node',
-} as const satisfies Config
+}
+module.exports = { nestConfig }
