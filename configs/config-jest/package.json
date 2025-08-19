@@ -1,0 +1,17 @@
+{
+  "name": "@ste-scityos/config-jest",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    "./nest": {
+      "require": "./nest.cjs"
+    }
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
