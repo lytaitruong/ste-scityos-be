@@ -1,0 +1,8 @@
+pre-commit:
+  parallel: false
+  jobs:
+    - name: "✔ Running lint"
+      run: bun turbo run lint
+
+    - name: "✔ Running test"
+      run: bun turbo run test
